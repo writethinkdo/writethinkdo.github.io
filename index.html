@@ -1,365 +1,1182 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-    <head> 
-        <meta charset="UTF-8"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-        <title>Write.Think.Do. (WTD)</title>         
-        <meta name="description" content=""> 
-        <meta name="keywords" content=""> 
-        <meta name="author" content=""> 
-        <!-- Font Awesome if you need it   -->   
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-  <link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css"> 
-      
-        <link rel="stylesheet" href="css/tailwind.min.css"> 
-        <!--Replace with your tailwind.css once created-->         
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet"> 
-        <!-- Define your gradient here - use online tools to find a gradient matching your branding-->         
-        <style><!-- .gradient { background: linear-gradient(90deg, #d53369 0%, #daae51 100%); } -->
-			
-	
-			li.striped-list {padding-left: 1ch; color:#000000;}
-			li.striped-list::marker {
-				content: "::";
-				color:#d2228c;
-			}
-			ul.striped-list > li:nth-of-type(odd) {
-				background-color: #F5F5F5;
-			}
-			ul.striped-list > li {
-				border-bottom: 1px solid rgb(221,221,221);
-				padding: 6px;
-			}
-			ul.striped-list > li:last-child {
-				border-bottom: none;
-			}
-		
-		.gradient { background: linear-gradient(90deg, #1a7aca 0%, #9bf114 100%); } 
-</style>         
-   
-    </head>     
-    <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;"> 
-        <!--Nav-->         
-        <nav id="header" class="fixed w-full z-30 top-0 text-white"> 
-            <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2"> 
-                <div class="pl-4 flex items-center"> 
-                    <a class="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#"> <img src="images/wtd_240.png"> </a> 
-                </div>                 
-                <div class="block lg:hidden pr-4"> 
-                    <button id="nav-toggle" class="flex items-center p-1 text-orange-800 hover:text-gray-900"> 
-                        <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <title>Menu</title>
-                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-                        </svg>                         
-                    </button>                     
-                </div>                 
-                <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content"> 
-                    <ul class="list-reset lg:flex justify-end flex-1 items-center"> 
-                        <li class="mr-3"> 
-                            <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a> 
-                        </li>                         
-                        <li class="mr-3"> 
-                            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#whatwedo">What We Do</a> 
-                        </li>                         
-                        <li class="mr-3"> 
-                            <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#whoweare">Who We are</a> 
-                        </li>                         
-                    </ul>  
-					
-					
-		
-        <a class="typeform-share button" href="https://form.typeform.com/to/q5CShp49" data-mode="drawer_right" style="display:inline-block;text-decoration:none;background-color:#000000;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" data-submit-close-delay="0" target="_blank">Contact</a> 
-        <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Write.Think.Do. (WTD) | Strategic Negotiations, Executive Facilitation, Procurement &amp; Business Strategy</title>
+  <meta name="title" content="Write.Think.Do. (WTD) | Strategic Negotiations, Executive Facilitation, Procurement &amp; Business Strategy">
+  <meta name="description" content="Senior-level management advisory specializing in commercial negotiations, executive facilitation, strategic procurement, sales effectiveness, and practical business strategy. Trusted by public authorities and enterprise leaders for 25+ years.">
+  <meta name="keywords" content="commercial negotiation advisory, executive facilitation, procurement advisory services, public sector RFP consultants, sales effectiveness, proposal strategy, practical business strategy, board alignment, game theory negotiations, Toronto management consultants, Write Think Do, WTD">
+  <meta name="author" content="Write.Think.Do. (WTD)">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wtd.to/">
 
-<!--					
-                    <button id="navAction" class="mx-auto lg:mx-0 hover:underline font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 gradient text-white"><a class="typeform-share link" href="https://form.typeform.com/to/q5CShp49" data-mode="drawer_right" target="_blank">Contact Us </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script></button> 
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wtd.to/">
+  <meta property="og:title" content="Write.Think.Do. (WTD) | Negotiations, Facilitation, Procurement &amp; Business Strategy">
+  <meta property="og:description" content="Senior management advisory in commercial negotiations, executive facilitation, procurement advisory, sales effectiveness, and practical business strategy.">
+  <meta property="og:image" content="https://wtd.to/images/to_bg_1920x1080.jpg">
+  <meta property="og:site_name" content="Write.Think.Do. (WTD)">
 
--->					
-                </div>                 
-            </div>             
-            <hr class="border-b border-gray-100 opacity-25 my-0 py-0"/> 
-        </nav>         
-        <!--Hero-->         
-        <div class="pt-24">
-            <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-                <!--Left Col-->                 
-                <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-                    <p class="uppercase tracking-loose w-full"></p> 
-                    <h1 class="my-4 text-5xl font-bold leading-tight">From thought to practice, right things done right.</h1> 
-                    <p class="leading-normal text-2xl mb-8">At Write.Think.Do. we work with management teams and their staff to tackle problems, both routine and wicked. <br><br>We advise them on decisions about strategy, marketing and sales, sourcing and operations. </p>
-                    <p class="leading-normal text-2xl mb-8">And through it all, we help them find the right words to articulate their objectives, strategies, interests and value. <br><br></p>
-                    <p class="leading-normal text-2xl mb-8"><span style="color: rgba(255,255,255,var(--text-opacity)); font-size: 1.5rem; letter-spacing: 0px;"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><br></p>
-                </div>                 
-                <!--Right Col-->                 
-                <div class="w-full md:w-3/5 py-10 text-center"> 
-                    <img class="w-full md:w-4/5 z-60" src="images/wtd_soccer_sm.png"> 
-                </div>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://wtd.to/">
+  <meta name="twitter:title" content="Write.Think.Do. (WTD) | Negotiations, Facilitation, Procurement &amp; Business Strategy">
+  <meta name="twitter:description" content="Senior-level management advisory in commercial negotiations, executive facilitation, procurement, sales effectiveness, and business strategy.">
+  <meta name="twitter:image" content="https://wtd.to/images/to_bg_1920x1080.jpg">
+
+  <!-- Theme & Mobile Icons -->
+  <meta name="theme-color" content="#0a1128">
+  <link rel="icon" type="image/png" href="images/wtd_white_100.png">
+  <link rel="apple-touch-icon" href="images/wtd_white_100.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Newsreader -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Bespoke Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org JSON-LD Structured Data for Maximum SEO Authority -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://wtd.to/#organization",
+        "name": "Write.Think.Do. (WTD)",
+        "url": "https://wtd.to/",
+        "logo": "https://wtd.to/images/wtd_white_100.png",
+        "image": "https://wtd.to/images/to_bg_1920x1080.jpg",
+        "description": "Boutique senior management consultancy advising on commercial negotiations, board & executive facilitation, strategic procurement, sales effectiveness, and practical business strategy. Consultants trained in the Harvard Program on Negotiation (PON) methodology, having advised on commercial agreements with total contract values from millions of dollars to over a billion dollars.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Toronto",
+          "addressRegion": "Ontario",
+          "addressCountry": "CA"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "43.6532",
+          "longitude": "-79.3832"
+        },
+        "areaServed": [
+          "Canada",
+          "United States",
+          "United Kingdom",
+          "Europe",
+          "Australia",
+          "New Zealand",
+          "Middle East",
+          "Asia"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "WTD Advisory Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Commercial & High-Stakes Negotiation Advisory",
+                "description": "Pre-negotiation game-theoretic scenario modeling, Harvard Program on Negotiation (PON) methodology, BATNA leverage analysis, table negotiation representation, term sheet formulation, and vendor contract renegotiation."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Executive & Boardroom Facilitation",
+                "description": "Neutral multi-stakeholder consensus building, board mediation, executive alignment sessions, and complex decision governance."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Strategic Sourcing & Procurement Advisory",
+                "description": "Defensible public and private sector RFx architecture, statutory procurement compliance, vendor governance, and Total Cost of Ownership optimization."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Sales Effectiveness & Proposal Strategy",
+                "description": "Commercial win-strategy, high-stakes proposal overhaul, value proposition design, and competitive pitch preparation."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Practical Business Strategy & Advisory",
+                "description": "Pragmatic business plan and business case formulation, operational decision-support, governance design, and executive coaching."
+              }
+            }
+          ]
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://wtd.to/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does WTD work alongside internal legal and procurement teams?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WTD acts as an agile strategic force multiplier for General Counsel and Chief Procurement Officers. We provide applied game theory, commercial leverage modeling, and operational term structure, ensuring legal counsel and internal teams retain full governance while securing superior business outcomes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the typical seniority of WTD consultants on client engagements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Every WTD engagement is directly led and executed by senior advisors averaging 25+ years of executive and management consulting experience. We operate on a zero-delegation model: the senior partners you consult are the exact practitioners who execute your mandate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does WTD advise on public sector procurement subject to strict statutory standards?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. WTD has an extensive track record advising Canadian federal and provincial ministries, municipalities, and public agencies on high-value procurements governed by statutory transparency, public procurement regulations, and competitive tendering standards, ensuring complete audit defensibility and zero bid protests."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How rapidly can WTD deploy for an urgent negotiation or board facilitation mandate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For critical time-sensitive mandates such as imminent supplier contract renewals or deadlocked board votes, our senior partners can mobilize within 24 to 48 hours for immediate game-theoretic preparation or executive facilitation design."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://wtd.to/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Negotiations Advisory",
+            "item": "https://wtd.to/#negotiations"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Executive Facilitation",
+            "item": "https://wtd.to/#facilitation"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Procurement Advisory",
+            "item": "https://wtd.to/#procurement"
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "name": "Contact & Consultation",
+            "item": "https://wtd.to/#contact"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header & Navigation
+       ======================================================================== -->
+  <header id="site-header" class="glass-nav" role="banner">
+    <div class="container">
+      <div class="nav-inner">
+        
+        <!-- Brand Logo & Badge -->
+        <a href="#" class="brand-logo-wrap" aria-label="Write.Think.Do. (WTD) Homepage">
+          <img src="images/wtd_white_100.png" alt="Write.Think.Do. (WTD) Advisory" class="brand-logo-img" width="130" height="51">
+          <span class="brand-badge">Advisory</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="nav-links" aria-label="Main Navigation">
+          <a href="#negotiations" class="nav-link">Negotiations</a>
+          <a href="#facilitation" class="nav-link">Facilitation</a>
+          <a href="#procurement" class="nav-link">Procurement</a>
+          <a href="#strategy-sales" class="nav-link">Strategy &amp; Sales</a>
+          <a href="#methodology" class="nav-link">Methodology</a>
+          <a href="#why-wtd" class="nav-link">Why WTD</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+        </nav>
+
+        <!-- Right Header Action -->
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-sm btn-gold">
+            <span>Schedule Briefing</span>
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobile-toggle" class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <ul class="mobile-menu-links">
+        <li><a href="#practices" class="mobile-menu-link">Practice Areas Overview</a></li>
+        <li><a href="#negotiations" class="mobile-menu-link">Commercial Negotiations</a></li>
+        <li><a href="#facilitation" class="mobile-menu-link">Executive &amp; Board Facilitation</a></li>
+        <li><a href="#procurement" class="mobile-menu-link">Strategic Procurement Advisory</a></li>
+        <li><a href="#strategy-sales" class="mobile-menu-link">Strategy &amp; Sales Effectiveness</a></li>
+        <li><a href="#methodology" class="mobile-menu-link">The WTD Methodology</a></li>
+        <li><a href="#why-wtd" class="mobile-menu-link">The WTD Advantage</a></li>
+        <li><a href="#faq" class="mobile-menu-link">Executive FAQ</a></li>
+        <li><a href="#contact" class="mobile-menu-link text-gold font-bold">Schedule a Consultation</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Hero Section
+       ======================================================================== -->
+  <main id="main-content">
+    <section class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-bg-texture" aria-hidden="true"></div>
+      <div class="hero-grid-pattern" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-content-wrap">
+          
+          <!-- Left Column: Executive Value Proposition -->
+          <div class="hero-text-col">
+            <div class="hero-eyebrow">
+              <span class="dot"></span>
+              <span>Executive Advisory &bull; High-Stakes Mandates</span>
             </div>
-        </div>         
-        <div class="relative -mt-12 lg:-mt-24"> 
-</div>         
-    </section>     
-    <section class="bg-white border-b py-8" id="whatwedo"> 
-        <div class="container mx-auto flex flex-wrap pt-3 pb-12" style="padding:2px"> 
-            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">What We Do</h1> 
-            <div class="w-full mb-4"> 
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>                 
-            </div>             
-            <div class="w-full md:w-1/4 p-6 flex flex-col flex-grow flex-shrink"> 
-                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"> 
-                    <p class="w-full text-gray-600 text-xs md:text-lg px-6" style="text-align: center; font-weight: bold; color: #050000; text-transform: uppercase; background-image: linear-gradient(90deg, #ffe259, #ffa751); font-size: 22px;"><b>Strategy &amp; <br/>Leadership</b></p> 
-                    <div class="w-full font-bold text-xl text-gray-800 px-6">
-                        <img src="images/strat1.png">
-                        <br/>
-                    </div>                     
-                    <p class="text-black-800 text-base px-6 mb-5"><ul class="striped-list" style="padding:1rem">
-                            <li class="striped-list"> Strategy formulation</li>
-                            <li class="striped-list">Leadership coaching</li>
-                            <li class="striped-list">Business plan and business case development</li>
-                            <li class="striped-list">Decision support research and analysis</li>
-                            <li class="striped-list">Business model innovation</li>
-                            <li class="striped-list">Governance design and implementation</li>
-                        </ul></p> 
-                </div>                 
-                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6" style="color: #000000;"> 
-                    <div class="flex items-center justify-start"> 
-</div>                     
-                </div>                 
-            </div>             
-            <div class="w-full md:w-1/4 p-6 flex flex-col flex-grow flex-shrink"> 
-                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"> 
-                    <a href="#" class="flex flex-wrap no-underline hover:no-underline"><p class="w-full text-black-600 text-xs md:text-lg px-6" style="font-weight: bold; background: linear-gradient(90deg, #9796f0, #fbc7d4); text-transform: uppercase; text-align: center; font-size: 22px;">Negotiations &amp; Facilitation</p> <div class="w-full font-bold text-xl text-gray-800 px-6"> 
-                            <img src="images/neg2.png">
-                            <br/>
-                        </div> <p class="text-gray-800 text-base px-6 mb-5"><ul class="striped-list" style="padding:1rem">
-                                <li class="striped-list">Management decision-making</li>
-                                <li class="striped-list">Board meetings</li>
-                                <li class="striped-list">Stakeholder discussions</li>
-                                <li class="striped-list">Client, partner and vendor agreements and contracts</li>
-                            </ul></p></a> 
-                </div>                 
-                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"> 
-                    <div class="flex items-center justify-center"> 
-</div>                     
-                </div>                 
-            </div>             
-            <div class="w-full md:w-1/4 p-6 flex flex-col flex-grow flex-shrink"> 
-                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                    <a href="#" class="flex flex-wrap no-underline hover:no-underline"> <p class="w-full text-black-600 text-xs md:text-sm lg-6" style="font-weight: bold; text-transform: uppercase; text-align: center; background: linear-gradient(90deg, #FF512F, #DD2476); font-size: 22px;">Sourcing &amp; <br/>Procurement</p> <div class="w-full font-bold text-xl text-gray-800 px-6">
-                            <img src="images/proc3.png" style="width: 221px;">
-                            <br/>
-                        </div> <p class="text-gray-800 text-base px-6 mb-5"><ul class="striped-list" style="padding:1rem">
-                                <li class="striped-list">Sourcing strategy formulation</li>
-                                <li class="striped-list">Procurement process optimization and implementation</li>
-                                <li class="striped-list">RFX development</li>
-                                <li class="striped-list">Contract management and governance</li>
-                            </ul></p> </a>
-                </div>                 
-                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"> 
-                    <div class="flex items-center justify-end"> 
-</div>                     
-                </div>                 
+
+            <h1 id="hero-title" class="hero-title">
+              From thought to practice, <br>
+              <span class="serif-highlight">right things done right.</span>
+            </h1>
+
+            <p class="hero-lead">
+              We advise corporate leadership, boards of directors, and public sector authorities through high-stakes commercial negotiations, executive facilitation, complex procurement transformations, sales effectiveness, and practical business strategy&mdash;having advised on commercial agreements with total contract values from millions of dollars to over a billion dollars.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#contact" class="btn btn-lg btn-gold">
+                <span>Discuss Your Mandate</span>
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </a>
+              <a href="#practices" class="btn btn-lg btn-outline-light">
+                <span>Explore Capabilities</span>
+              </a>
             </div>
-            <div class="w-full md:w-1/4 p-6 flex flex-col flex-grow flex-shrink"> 
-                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
-                    <a href="#" class="flex flex-wrap no-underline hover:no-underline"> <p class="w-full text-black-600 text-xs md:text-lg px-6" style="font-size: 22px; font-weight: bold; text-align: center; background: linear-gradient(90deg, #FFE000, #799F0C); text-transform: uppercase;">Sales &amp; <br/>Marketing</p> <div class="w-full font-bold text-xl text-gray-800 px-6"> 
-                            <img src="images/sales4.jpg">
-                            <br/>
-                        </div> <p class="text-gray-800 text-base px-6 mb-5"><ul class="striped-list" style="padding:1rem">
-                                <li class="striped-list">Creating, writing and editing sales pitches and proposals</li>
-                                <li class="striped-list">Writing and editing marketing copy, web content, reports and other publications</li>
-                            </ul></p> </a>
-                </div>                 
-                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"> 
-                    <div class="flex items-center justify-end"> 
-</div>                     
-                </div>                 
-            </div>             
-        </div>         
-    </section>     
-    <section class="bg-gray-100 py-8" id="whoweare"> 
-        <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
-            <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">Who We Are</h1> 
-            <div class="w-full mb-4"> 
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t">
-                    <br>&nbsp;We are compulsive problem seekers.&nbsp;
-                </div>
-                <p><br></p> 
-            </div>             
-            <div class="flex flex-col sm:flex-row justify-center pt-12 my-12 sm:my-4"> 
-                <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4"> 
-                    <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow" style="font-weight: normal; text-align: left;"> 
-                        <div class="p-8 text-3xl font-bold text-center border-b-4">Global</div>                         
-                        <ul class="w-full text-sm" style="padding:1rem"> 
-                            <li class="border-b py-4">We have worked in practically every Canadian province, as well as internationally, with clients in the United States, United Kingdom, Europe, Australia, New Zealand, the Middle East and Asia. Our Canadian clients include government ministries and agencies; municipalities; chartered banks; pension funds; and energy and infrastructure companies, among others.</li>                             
-                        </ul>                         
-                    </div>                     
-                </div>                 
-                <div class="flex flex-col w-5/6 lg:w-1/3 mx-auto lg:mx-0 rounded-lg bg-white mt-4 sm:-mt-6 shadow-lg z-10"> 
-                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow" style="font-weight: normal; text-align: left;"> 
-                        <div class="w-full p-8 text-3xl font-bold text-center">Hands On</div>                         
-                        <div class="h-1 w-full gradient my-0 py-0 rounded-t"></div>                         
-                        <ul class="w-full text-center text-base font-bold" style="padding:1rem"> 
-                            <li class="border-b py-4" style="text-align: left; font-weight: normal;">On average our consultants have 20 years of experience in management consulting or corporate operational and executive roles. 
-                                <br>
-                                <br>Yet, we pride ourselves on not being afraid of getting our hands dirty when working with clients. 
-                                <br>You get the most senior, seasoned advisors with the knowledge, skills and judgement to help you with the knottiest problems. 
-                                <br>
-                                <br>The breadth and depth of our experience sets us apart from other advisors.
-                            </li>                             
-                        </ul>                         
-                    </div>                     
-                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"> 
-</div>                     
-                </div>                 
-                <div class="flex flex-col w-5/6 lg:w-1/4 mx-auto lg:mx-0 rounded-none lg:rounded-l-lg bg-white mt-4"> 
-                    <div class="flex-1 bg-white text-gray-600 rounded-t rounded-b-none overflow-hidden shadow"> 
-                        <div class="p-8 text-3xl font-bold text-center border-b-4">Dogged</div>                         
-                        <ul class="w-full text-center text-sm" style="padding:1rem"> 
-                            <li class="border-b py-4" style="text-align: left;">We are dogged in our commitment to find new ways of tackling the most intractable problems. We push ourselves to think fresh, be bold and take chances. In this we are aided by our broad experience across industries, geographies and types of organizations. We bring a degree of knowledge and understanding and an attitude that allows us to learn fast and formulate recommendations tailored to your situation, not pulled out of a playbook.</li>                             
-                        </ul>                         
-                    </div>                     
-                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"> 
-</div>                     
-                </div>
+
+            <!-- Quantitative Trust Signals -->
+            <div class="hero-proof-stats">
+              <div class="stat-item">
+                <div class="stat-num">25<span>+</span> Yrs</div>
+                <div class="stat-label">Average Senior Advisory Experience</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">$1B<span>+</span></div>
+                <div class="stat-label">Contract Values Advised: Millions to $1B+</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">100<span>%</span></div>
+                <div class="stat-label">Senior Partner Delivery (Zero Junior Delegates)</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">7<span>+</span></div>
+                <div class="stat-label">Global Regions &amp; All Canadian Provinces</div>
+              </div>
             </div>
-        </div>         
-    </section>     
-    <!-- Change the colour #f8fafc to match the previous section colour -->     
-    <svg class="wave-top" viewBox="0 0 1439 147" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> 
-        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> 
-            <g transform="translate(-1.000000, -14.000000)" fill-rule="nonzero"> 
-                <g class="wave" fill="#f8fafc"> 
-                    <path d="M1440,84 C1383.555,64.3 1342.555,51.3 1317,45 C1259.5,30.824 1206.707,25.526 1169,22 C1129.711,18.326 1044.426,18.475 980,22 C954.25,23.409 922.25,26.742 884,32 C845.122,37.787 818.455,42.121 804,45 C776.833,50.41 728.136,61.77 713,65 C660.023,76.309 621.544,87.729 584,94 C517.525,105.104 484.525,106.438 429,108 C379.49,106.484 342.823,104.484 319,102 C278.571,97.783 231.737,88.736 205,84 C154.629,75.076 86.296,57.743 0,32 L0,0 L1440,0 L1440,84 Z"></path>                     
-                </g>                 
-                <g transform="translate(1.000000, 15.000000)" fill="#FFFFFF"> 
-                    <g transform="translate(719.500000, 68.500000) rotate(-180.000000) translate(-719.500000, -68.500000) "> 
-                        <path d="M0,0 C90.7283404,0.927527913 147.912752,27.187927 291.910178,59.9119003 C387.908462,81.7278826 543.605069,89.334785 759,82.7326078 C469.336065,156.254352 216.336065,153.6679 0,74.9732496" opacity="0.100000001"></path>                         
-                        <path d="M100,104.708498 C277.413333,72.2345949 426.147877,52.5246657 546.203633,45.5787101 C666.259389,38.6327546 810.524845,41.7979068 979,55.0741668 C931.069965,56.122511 810.303266,74.8455141 616.699903,111.243176 C423.096539,147.640838 250.863238,145.462612 100,104.708498 Z" opacity="0.100000001"></path>                         
-                        <path d="M1046,51.6521276 C1130.83045,29.328812 1279.08318,17.607883 1439,40.1656806 L1439,120 C1271.17211,77.9435312 1140.17211,55.1609071 1046,51.6521276 Z" opacity="0.200000003"></path>                         
-                    </g>                     
-                </g>                 
-            </g>             
-        </g>         
-    </svg>     
-    <section class="container mx-auto text-center py-6 mb-12" id="contact"> 
-        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">Contact Us</h1> 
-        <div class="w-full mb-4"> 
-            <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>             
-        </div>         
-        <h3 class="my-4 text-3xl leading-tight">Find out how we apply fresh thinking and dogged problem solving to tackle your gnarliest problems.</h3> 
-		
-		<a class="typeform-share button" href="https://form.typeform.com/to/q5CShp49?typeform-medium=embed-snippet" data-mode="drawer_right" style="display:inline-block;text-decoration:none;background-color:#3A7685;color:white;cursor:pointer;font-family:Helvetica,Arial,sans-serif;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:bold;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;" target="_blank">Let's go!</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+          </div>
 
+          <!-- Right Column: Interactive Mandate Diagnostic Card -->
+          <div class="hero-card-col">
+            <div class="hero-card">
+              <span class="card-badge">Interactive Mandate Diagnostic</span>
+              <h2 class="card-heading">Select Your Critical Challenge</h2>
+              <p class="card-desc">
+                Identify your immediate organizational friction point to preview the tailored WTD intervention track:
+              </p>
 
-		
-		
-        <!--		
-        <button class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">Action!</button>      
-	
--->         
-    </section>     
-    <!--Footer-->     
-    <footer class="bg-white"> 
-        <div class="container mx-auto  px-8"> 
-            <div class="w-full flex flex-col md:flex-row py-6"> 
-                <div class="flex-1 mb-6">
-                    <br>
+              <!-- Diagnostic Selector Tabs -->
+              <div class="diagnostic-tabs" role="tablist" aria-label="Challenge selection">
+                <button type="button" class="diag-tab-btn active" data-track="negotiations" role="tab" aria-selected="true" id="tab-neg">
+                  Negotiations
+                </button>
+                <button type="button" class="diag-tab-btn" data-track="facilitation" role="tab" aria-selected="false" id="tab-fac">
+                  Facilitation
+                </button>
+                <button type="button" class="diag-tab-btn" data-track="procurement" role="tab" aria-selected="false" id="tab-proc">
+                  Procurement
+                </button>
+              </div>
+
+              <!-- Diagnostic Live Result Box -->
+              <div class="diag-result-box" aria-live="polite">
+                <h3 id="diag-title" class="diag-result-title">
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                  </svg>
+                  Commercial &amp; Supplier Negotiations Track
+                </h3>
+                <p id="diag-text" class="diag-result-text">
+                  Engineered for organizations facing high-stakes vendor contract renewals, complex enterprise pricing asymmetry, partner disputes, or high-value procurement negotiations.
+                </p>
+                <ul id="diag-checklist" class="diag-checklist">
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Harvard Program on Negotiation (PON) methodology &amp; BATNA modeling</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Direct table negotiation or strategic behind-the-scenes scenario modeling</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Term sheet redlining &amp; risk-limiting contract governance</span>
+                  </li>
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Targeted 15%–35% commercial value optimization</span>
+                  </li>
+                </ul>
+              </div>
+
+              <button type="button" id="diag-cta-btn" class="btn btn-gold" style="width: 100%;" data-target-area="negotiations">
+                Inquire About Negotiation Advisory
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Credibility & Sector Authority Bar
+         ======================================================================== -->
+    <section class="authority-bar" aria-labelledby="authority-title">
+      <div class="container">
+        <h2 id="authority-title" class="authority-title">Trusted By Leadership Across Regulated, Public &amp; Enterprise Sectors</h2>
+        <div class="sectors-grid">
+          <div class="sector-chip">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M3 21h18M3 7v14M21 7v14M6 11v6M10 11v6M14 11v6M18 11v6M12 3l9 4H3l9-4z"/>
+            </svg>
+            <span>Government Ministries</span>
+          </div>
+          <div class="sector-chip">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+            <span>Chartered Banks</span>
+          </div>
+          <div class="sector-chip">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            <span>Pension &amp; Sovereign Funds</span>
+          </div>
+          <div class="sector-chip">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+            <span>Energy &amp; Utilities</span>
+          </div>
+          <div class="sector-chip">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="1" y="3" width="15" height="13"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+            <span>Critical Infrastructure</span>
+          </div>
+          <div class="sector-chip">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span>Global Enterprises</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Core Practice Areas (Negotiations, Facilitation, Procurement)
+         ======================================================================== -->
+    <section id="practices" class="section section-light" aria-labelledby="practices-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Core Advisory Disciplines</span>
+          <h2 id="practices-heading" class="section-heading">High-Stakes Advisory Focused on Decisive Outcomes</h2>
+          <p class="section-desc">
+            We specialize in interconnected advisory practices where the economic, operational, and reputational stakes are highest.
+          </p>
+        </div>
+
+        <div class="practice-grid">
+          
+          <!-- Pillar 1: Negotiations Advisory -->
+          <article id="negotiations" class="practice-card" aria-labelledby="p1-title">
+            <span class="practice-num" aria-hidden="true">01</span>
+            <div class="practice-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+
+            <h3 id="p1-title" class="practice-card-title">Commercial &amp; Vendor Negotiations</h3>
+            <p class="practice-card-desc">
+              Leveling the playing field against well-prepared counterparties. Trained in the Harvard Program on Negotiation (PON) methodology and rooted in applied game theory, our consultants have advised on commercial agreements with total contract values ranging from millions of dollars to over a billion dollars, securing durable economic value while preserving crucial commercial partnerships.
+            </p>
+
+            <div class="practice-detail-block">
+              <div class="practice-detail-label">Advisory Capabilities</div>
+              <ul class="practice-feature-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Harvard Program on Negotiation (PON) methodology &amp; BATNA leverage engineering</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Major enterprise SaaS &amp; infrastructure contract renewals</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Dispute settlement &amp; commercial contract restructuring</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Term sheet calibration &amp; definitive agreement redlining</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="practice-outcome">
+              <strong>Proven Impact:</strong> 15%–35% average commercial savings capture and eliminated liability exposure without vendor estrangement.
+            </div>
+
+            <a href="#contact" class="practice-action-link" data-jump-contact="negotiations">
+              <span>Engage Negotiation Advisory</span>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Pillar 2: Facilitations & Consensus Building -->
+          <article id="facilitation" class="practice-card" aria-labelledby="p2-title">
+            <span class="practice-num" aria-hidden="true">02</span>
+            <div class="practice-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="12 8 8 12 12 16 16 12 12 8"/>
+                <line x1="12" y1="2" x2="12" y2="4"/>
+                <line x1="12" y1="20" x2="12" y2="22"/>
+              </svg>
+            </div>
+
+            <h3 id="p2-title" class="practice-card-title">Executive &amp; Board Facilitation</h3>
+            <p class="practice-card-desc">
+              Transforming conflicting agendas and wicked problems into unified leadership commitment. We structure objective decision environments to resolve deadlock and drive decisive consensus.
+            </p>
+
+            <div class="practice-detail-block">
+              <div class="practice-detail-label">Advisory Capabilities</div>
+              <ul class="practice-feature-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Boardroom alignment &amp; contentious governance mediation</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Multi-stakeholder &amp; Public-Private Partnership (P3) forums</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Wicked problem dissection &amp; strategic priority convergence</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Post-merger leadership integration &amp; operational roadmaps</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="practice-outcome">
+              <strong>Proven Impact:</strong> Months of circular debate compressed into focused, decisive action with 100% executive buy-in.
+            </div>
+
+            <a href="#contact" class="practice-action-link" data-jump-contact="facilitation">
+              <span>Engage Facilitation Advisory</span>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </article>
+
+          <!-- Pillar 3: Procurement Advisory -->
+          <article id="procurement" class="practice-card" aria-labelledby="p3-title">
+            <span class="practice-num" aria-hidden="true">03</span>
+            <div class="practice-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+
+            <h3 id="p3-title" class="practice-card-title">Strategic Procurement &amp; Sourcing</h3>
+            <p class="practice-card-desc">
+              Disciplined sourcing architecture, audit-proof public RFx design, and resilient vendor governance. Having advised on commercial and public sector agreements with total contract values from millions of dollars to over a billion dollars, we protect public bodies and corporations from bid protests and unfavorable lock-ins.
+            </p>
+
+            <div class="practice-detail-block">
+              <div class="practice-detail-label">Advisory Capabilities</div>
+              <ul class="practice-feature-list">
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Defensible RFx architecture (RFP, RFQ, RFI &amp; Negotiated RFP)</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Public sector regulatory compliance &amp; statutory audit governance</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Total Cost of Ownership (TCO) &amp; should-cost financial modeling</span>
+                </li>
+                <li>
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Contract lifecycle management &amp; supplier SLA governance</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="practice-outcome">
+              <strong>Proven Impact:</strong> Zero bid protests on public tenders, audit-proof defensibility, and sustainable 18%–40% procurement efficiencies.
+            </div>
+
+            <a href="#contact" class="practice-action-link" data-jump-contact="procurement">
+              <span>Engage Procurement Advisory</span>
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </article>
+
+        </div>
+
+        <!-- ====================================================================
+             Complementary Capabilities: Sales Effectiveness & Practical Strategy
+             ==================================================================== -->
+        <div id="strategy-sales" class="extended-services-wrap">
+          <div class="extended-services-header">
+            <span class="section-eyebrow">Complementary Advisory Disciplines</span>
+            <h3 style="font-size: 1.85rem; font-weight: 800; color: var(--slate-900); letter-spacing: -0.01em;">
+              Sales Effectiveness &amp; Practical Business Strategy
+            </h3>
+            <p style="color: var(--slate-600); font-size: 1rem; max-width: 680px; margin: 0.5rem auto 0 auto;">
+              Beyond negotiations and sourcing, we partner with executive teams to refine commercial win-rates, formulate defensible business plans, and communicate value with surgical precision.
+            </p>
+          </div>
+
+          <div class="extended-services-grid">
+            
+            <!-- Service 4: Sales Effectiveness & High-Stakes Proposals -->
+            <div class="extended-service-card">
+              <span class="brand-badge" style="width: fit-content; margin-bottom: 1rem;">Commercial Growth</span>
+              <h3>Sales Effectiveness &amp; Proposal Strategy</h3>
+              <p>
+                Clarity of commercial value drives deal closure. We help executive and business development teams elevate sales pitches, restructure competitive bids, and frame value propositions so buyers immediately recognize economic return.
+              </p>
+              
+              <ul class="extended-service-features">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Win-strategy development for high-stakes enterprise bids and RFPs</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Rewriting and structuring sales proposals to maximize executive clarity</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Executive presentation and pitch coaching for commercial teams</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Defending margin integrity against aggressive procurement counter-tactics</span>
+                </li>
+              </ul>
+
+              <a href="#contact" class="btn btn-sm btn-outline-light" data-jump-contact="sales-proposals" style="align-self: flex-start;">
+                <span>Inquire About Sales Effectiveness</span>
+              </a>
+            </div>
+
+            <!-- Service 5: Practical Business Strategy & Planning -->
+            <div class="extended-service-card">
+              <span class="brand-badge" style="width: fit-content; margin-bottom: 1rem;">Executive Advisory</span>
+              <h3>Practical Business Strategy &amp; Advisory</h3>
+              <p>
+                We formulate strategy rooted in operational reality, avoiding generic slide decks. We partner with leadership to build rigorous business cases, evaluate strategic choices, and establish resilient corporate governance.
+              </p>
+
+              <ul class="extended-service-features">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Comprehensive business plan and business case development</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Decision-support research, economic feasibility, and financial modeling</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Business model innovation and operating governance design</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Executive leadership coaching through operational transitions</span>
+                </li>
+              </ul>
+
+              <a href="#contact" class="btn btn-sm btn-outline-light" data-jump-contact="business-strategy" style="align-self: flex-start;">
+                <span>Inquire About Business Strategy</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         The WTD Methodology ("From Thought to Practice")
+         ======================================================================== -->
+    <section id="methodology" class="section section-dark" aria-labelledby="method-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Our Advisory Architecture</span>
+          <h2 id="method-heading" class="section-heading">From Thought to Practice: The WTD Framework</h2>
+          <p class="section-desc">
+            We reject pre-packaged consulting playbooks. Every mandate is engineered through our disciplined three-phase doctrine designed to turn complex strategic intent into durable operational realities.
+          </p>
+        </div>
+
+        <div class="methodology-grid">
+          
+          <div class="method-card">
+            <span class="method-step-pill">Phase 01 &bull; Clarify</span>
+            <h3 class="method-title">Write: Precision Framing</h3>
+            <p class="method-desc">
+              Finding the exact words that define objectives, constraints, and commercial value. We cut through organizational fog to articulate underlying interests, test core assumptions, and establish indisputable problem boundaries.
+            </p>
+          </div>
+
+          <div class="method-card">
+            <span class="method-step-pill">Phase 02 &bull; Analyze</span>
+            <h3 class="method-title">Think: Applied Game Theory</h3>
+            <p class="method-desc">
+              Dogged quantitative and qualitative inquiry. Applying game theory and strategic scenario modeling, we evaluate counterparty payoffs, model vendor cost structures, and stress-test strategic options before table discussions commence.
+            </p>
+          </div>
+
+          <div class="method-card">
+            <span class="method-step-pill">Phase 03 &bull; Execute</span>
+            <h3 class="method-title">Do: Disciplined Intervention</h3>
+            <p class="method-desc">
+              Hands-on execution where rubber meets the road. Whether leading multi-party executive alignment sessions, sitting at the negotiation table, or implementing procurement controls, we ensure right things get done right.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Why WTD / Executive Differentiators
+         ======================================================================== -->
+    <section id="why-wtd" class="section section-light" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">The WTD Distinction</span>
+          <h2 id="why-heading" class="section-heading">Why Senior Leaders Entrust Their Knottiest Mandates to WTD</h2>
+          <p class="section-desc">
+            We are compulsive problem seekers who partner with clients when conventional approaches have stalled.
+          </p>
+        </div>
+
+        <div class="diff-grid">
+          
+          <div class="diff-card">
+            <div class="diff-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+            </div>
+            <h3 class="diff-title">Senior Partners Only</h3>
+            <p class="diff-desc">
+              Zero junior hand-offs. On average, our consultants possess 25+ years of tier-one management consulting or corporate operational leadership, are trained in the Harvard Program on Negotiation (PON) methodology, and have advised on commercial agreements with total contract values from millions of dollars to over a billion dollars. The seasoned advisors you meet are the exact practitioners who execute your mandate.
+            </p>
+          </div>
+
+          <div class="diff-card">
+            <div class="diff-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h3 class="diff-title">Dogged Problem Seekers</h3>
+            <p class="diff-desc">
+              We do not copy-paste generic templates. We bring an obsessive commitment to discovering novel solutions for intractable problems, pushing leadership teams to think boldly and execute with surgical precision.
+            </p>
+          </div>
+
+          <div class="diff-card">
+            <div class="diff-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+              </svg>
+            </div>
+            <h3 class="diff-title">Dual Public &amp; Corporate Fluency</h3>
+            <p class="diff-desc">
+              We navigate statutory transparency, auditor oversight, and public sector procurement standards as effectively as high-stakes commercial boardroom dynamics and shareholder return requirements.
+            </p>
+          </div>
+
+          <div class="diff-card">
+            <div class="diff-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h3 class="diff-title">Global Perspective</h3>
+            <p class="diff-desc">
+              Headquartered in Toronto, we have executed mandates across practically every Canadian province and internationally throughout the US, UK, Europe, Australia, New Zealand, the Middle East, and Asia.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Executive FAQ Section (Accessible Mutually Exclusive Accordion)
+         ======================================================================== -->
+    <section id="faq" class="section section-light" style="background-color: var(--slate-100);" aria-labelledby="faq-heading">
+      <div class="container container-narrow">
+        <div class="section-header" style="margin-bottom: 3rem;">
+          <span class="section-eyebrow">Advisory Governance</span>
+          <h2 id="faq-heading" class="section-heading">Frequently Addressed Inquiries</h2>
+          <p class="section-desc">
+            Direct answers on our engagement structure, confidentiality protocols, and rapid deployment readiness.
+          </p>
+        </div>
+
+        <div class="faq-wrap">
+          
+          <details class="faq-item" name="wtd-faq" open>
+            <summary class="faq-summary">
+              <span>How does WTD work alongside our internal legal and procurement teams?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                We serve as an agile strategic force multiplier, not a replacement. In negotiations and procurement, we focus on commercial strategy, applied game theory, economic leverage modeling, and operational term structure. General Counsel and internal legal teams retain full authority over drafting and legal compliance, while Chief Procurement Officers leverage our market intelligence and objective third-party authority to strengthen their bargaining position.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="wtd-faq">
+            <summary class="faq-summary">
+              <span>What is your engagement structure for urgent or time-sensitive mandates?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                When an imminent contract renewal deadline looms or an emergency board deadlock threatens strategic momentum, we can mobilize within 24 to 48 hours. Our senior partners immediately initiate game-theoretic scenario modeling, term audits, or stakeholder discovery to establish rapid tactical footing.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="wtd-faq">
+            <summary class="faq-summary">
+              <span>Are all discussions and preliminary consultations covered under confidentiality?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Unconditionally. High-stakes negotiations, procurement overhauls, and board mediations inherently deal with sensitive, market-moving, or politically delicate information. We routinely execute mutual non-disclosure agreements (NDAs) prior to exploratory briefings, and all client communications are handled with strict executive discretion.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="wtd-faq">
+            <summary class="faq-summary">
+              <span>Do you have track record advising public sector entities on statutory procurements?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Yes. Our Canadian clients include federal ministries, provincial agencies, and municipalities. We specialize in designing transparent, defensible RFx processes compliant with public sector procurement regulations and statutory transparency requirements, ensuring complete audit defensibility and mitigating the risk of vendor bid protests.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item" name="wtd-faq">
+            <summary class="faq-summary">
+              <span>Can WTD provide behind-the-scenes negotiation coaching without sitting at the table?</span>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Frequently. Many executive clients prefer that counterparties remain unaware of outside advisory support. In this game-theoretic advisory model, our advisors apply the Harvard Program on Negotiation (PON) mutual gains framework to prep your internal negotiating team between sessions, analyze counterparty offers, craft tactical response language, and map concession trades while your executives lead the public discussion.
+              </p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         High-Converting Executive Contact & Intake Suite
+         ======================================================================== -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Left Column: Confidential Mandate Protocol & Direct Channels -->
+          <div class="contact-info-col">
+            <span class="hero-eyebrow">
+              <span class="dot"></span>
+              <span>Confidential Consultation</span>
+            </span>
+
+            <h2 id="contact-heading">Initiate a Mandate Discussion</h2>
+            <p>
+              Connect directly with a Senior Partner to discuss your negotiation, facilitation, procurement, sales effectiveness, or business strategy requirements under strict confidentiality.
+            </p>
+
+            <ul class="trust-badges-list">
+              <li class="trust-badge-item">
+                <div class="trust-badge-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                  </svg>
                 </div>
-                
-            </div>             
-        </div>         
-        <font size="-3"><a href="https://www.freepik.com/" class="text-gray-500">&copy; WTD. Vector images courtesy of and copyright by Freepik. Theme by Tailwind.&nbsp;</a> </font>
-    </footer>     
-    <!-- jQuery if you need it
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  -->     
-    <script>
+                <div class="trust-badge-text">
+                  <h4>Guaranteed Confidentiality &amp; NDA Protocol</h4>
+                  <p>Mutual non-disclosure agreements provided and executed immediately upon request prior to substantive disclosures.</p>
+                </div>
+              </li>
+              <li class="trust-badge-item">
+                <div class="trust-badge-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div class="trust-badge-text">
+                  <h4>24-Hour Partner Response Standard</h4>
+                  <p>Inquiries are reviewed exclusively by Senior Partners averaging 25+ years of experience. You will receive a direct, confidential response within one business day.</p>
+                </div>
+              </li>
+              <li class="trust-badge-item">
+                <div class="trust-badge-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                </div>
+                <div class="trust-badge-text">
+                  <h4>Zero-Obligation Exploratory Scoping</h4>
+                  <p>Preliminary 30-minute scoping discussions carry no financial obligation and focus on assessing alignment and mandate feasibility.</p>
+                </div>
+              </li>
+            </ul>
 
-	var scrollpos = window.scrollY;
-	var header = document.getElementById("header");
-	var navcontent = document.getElementById("nav-content");
-	var navaction = document.getElementById("navAction");
-	var brandname = document.getElementById("brandname");
-	var toToggle = document.querySelectorAll(".toggleColour");
+            <!-- Direct Contact Links Box (No raw email text printed) -->
+            <div class="direct-connect-box">
+              <div class="direct-connect-title">Direct Executive Channels</div>
+              <div class="direct-links">
+                <a href="#contact" class="direct-link-item" onclick="document.getElementById('full-name').focus();">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  <span>Confidential Mandate Scoping (Partner Direct)</span>
+                </a>
+                <div class="direct-link-item" style="color: var(--slate-400); font-size: 0.85rem;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <span>Toronto, Ontario, Canada &bull; Global Advisory Reach</span>
+                </div>
+              </div>
 
-	document.addEventListener('scroll', function() {
+              <!-- Fast-Track Typeform Option -->
+              <a href="https://form.typeform.com/to/q5CShp49" target="_blank" rel="noopener noreferrer" class="typeform-alt-link">
+                <span>Prefer our fast-track intake form? Launch Typeform &rarr;</span>
+              </a>
+            </div>
+          </div>
 
-	/*Apply classes for slide in bar*/
-	scrollpos = window.scrollY;
+          <!-- Right Column: Accessible In-Page Lead Intake Form -->
+          <div class="form-card">
+            <div class="form-header">
+              <h3>Mandate Scoping Request</h3>
+              <p>Please share brief context on your challenge. All inputs are strictly confidential.</p>
+            </div>
 
-    if(scrollpos > 10){
-      header.classList.add("bg-white");
-	  navaction.classList.remove("bg-white");
-	  navaction.classList.add("gradient");
-	  navaction.classList.remove("text-gray-800");
-	  navaction.classList.add("text-white");
-	  //Use to switch toggleColour colours
-  	  for (var i = 0; i < toToggle.length; i++) {
-	     toToggle[i].classList.add("text-gray-800");
-		 toToggle[i].classList.remove("text-white");
-	  }
-	  header.classList.add("shadow");
-	  navcontent.classList.remove("bg-gray-100");
-	  navcontent.classList.add("bg-white");
-    }
-    else {
-	  header.classList.remove("bg-white");
-	  navaction.classList.remove("gradient");
-	  navaction.classList.add("bg-white");
-	  navaction.classList.remove("text-white");
-	  navaction.classList.add("text-gray-800");
-	  //Use to switch toggleColour colours
-  	  for (var i = 0; i < toToggle.length; i++) {
-	     toToggle[i].classList.add("text-white");
-		 toToggle[i].classList.remove("text-gray-800");
-	  }
-	  
-	  header.classList.remove("shadow");
-	  navcontent.classList.remove("bg-white");
-	  navcontent.classList.add("bg-gray-100");
-	  
-    }
+            <!-- Accessible Dynamic Status Announcement -->
+            <div id="form-status-alert" class="form-status-alert" role="status" aria-live="polite"></div>
 
-	});
+            <form id="advisory-contact-form" class="contact-form" method="POST" action="#contact" novalidate>
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="full-name">Full Name <span class="required" aria-hidden="true">*</span></label>
+                  <input type="text" id="full-name" name="name" required autocomplete="name" autocorrect="off" placeholder="e.g. Sarah Jenkins">
+                </div>
+                <div class="form-group">
+                  <label for="email-address">Corporate Email <span class="required" aria-hidden="true">*</span></label>
+                  <input type="email" id="email-address" name="email" required autocomplete="email" inputmode="email" autocorrect="off" placeholder="e.g. sjenkins@organization.com">
+                </div>
+              </div>
 
-	
-</script>     
-    <script>
-	
-	
-	/*Toggle dropdown list*/
-	/*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
-	
-	var navMenuDiv = document.getElementById("nav-content");
-	var navMenu = document.getElementById("nav-toggle");
-	
-	document.onclick = check;
-	function check(e){
-	  var target = (e && e.target) || (event && event.srcElement);
-	  
-	  //Nav Menu
-	  if (!checkParent(target, navMenuDiv)) {
-		// click NOT on the menu
-		if (checkParent(target, navMenu)) {
-		  // click on the link
-		  if (navMenuDiv.classList.contains("hidden")) {
-			navMenuDiv.classList.remove("hidden");
-		  } else {navMenuDiv.classList.add("hidden");}
-		} else {
-		  // click both outside link and outside menu, hide menu
-		  navMenuDiv.classList.add("hidden");
-		}
-	  }
-	  
-	}
-	function checkParent(t, elm) {
-	  while(t.parentNode) {
-		if( t == elm ) {return true;}
-		t = t.parentNode;
-	  }
-	  return false;
-	}
-</script>     
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="organization">Organization / Agency</label>
+                  <input type="text" id="organization" name="organization" autocomplete="organization" placeholder="e.g. Ministry of Infrastructure / Enterprise Corp">
+                </div>
+                <div class="form-group">
+                  <label for="mandate-timeline">Expected Timeline</label>
+                  <select id="mandate-timeline" name="timeline">
+                    <option value="immediate">Immediate / Urgent (&lt; 30 days)</option>
+                    <option value="1-3-months" selected>1 to 3 Months</option>
+                    <option value="exploratory">Exploratory / Planning Stage</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="focus-area">Primary Advisory Practice <span class="required" aria-hidden="true">*</span></label>
+                <select id="focus-area" name="focus_area" required>
+                  <option value="" disabled selected>Select practice area...</option>
+                  <option value="negotiations">Commercial &amp; Supplier Negotiations</option>
+                  <option value="facilitation">Executive &amp; Board Facilitation</option>
+                  <option value="procurement">Strategic Sourcing &amp; Procurement Advisory</option>
+                  <option value="sales-proposals">Sales Effectiveness &amp; Proposals</option>
+                  <option value="business-strategy">Practical Business Strategy &amp; Planning</option>
+                  <option value="general">Comprehensive Strategic Advisory Mandate</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="mandate-scope">Confidential Mandate Overview <span class="required" aria-hidden="true">*</span></label>
+                <textarea id="mandate-scope" name="message" required placeholder="Briefly summarize your situation, counterparty or stakeholder context, and primary desired outcomes..." aria-describedby="scope-hint"></textarea>
+                <span id="scope-hint" class="form-hint">Brief high-level summary is sufficient. Specific counterparty names are not required at this stage.</span>
+              </div>
+
+              <button type="submit" class="btn btn-gold btn-lg" style="width: 100%;">
+                <span>Submit Confidential Briefing</span>
+                <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+
+              <p class="privacy-notice">
+                Protected by strict client confidentiality. No marketing spam. Direct senior partner consultation.
+              </p>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <a href="#" class="brand-logo-wrap">
+            <img src="images/wtd_white_100.png" alt="Write.Think.Do. Logo" class="brand-logo-img" width="130" height="51">
+          </a>
+          <p>
+            Senior-level management advisory specializing in commercial negotiations, executive facilitation, strategic procurement, sales effectiveness, and practical business strategy.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Practice Areas</h4>
+          <ul class="footer-links">
+            <li><a href="#negotiations">Commercial Negotiations</a></li>
+            <li><a href="#facilitation">Executive Facilitation</a></li>
+            <li><a href="#procurement">Procurement &amp; Sourcing</a></li>
+            <li><a href="#strategy-sales">Sales Effectiveness</a></li>
+            <li><a href="#strategy-sales">Practical Business Strategy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Advisory</h4>
+          <ul class="footer-links">
+            <li><a href="#methodology">The WTD Methodology</a></li>
+            <li><a href="#why-wtd">Why Senior Leaders Choose WTD</a></li>
+            <li><a href="#faq">Executive FAQ</a></li>
+            <li><a href="#contact">Schedule Mandate Briefing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Global Headquarters</h4>
+          <ul class="footer-links">
+            <li><span style="color: #ffffff; font-weight: 600;">Toronto, Ontario, Canada</span></li>
+            <li><span>Advising clients across North America, UK, Europe, Australia, New Zealand, the Middle East, and Asia.</span></li>
+            <li style="margin-top: 0.75rem;">
+              <a href="#contact" style="color: var(--gold-light); font-weight: 600;">
+                <span>Confidential Mandate Channel &rarr;</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="year">2026</span> Write.Think.Do. (WTD). All rights reserved. Registered domain: wtd.to.
+        </div>
+        <div>
+          <a href="#site-header" style="display: inline-flex; align-items: center; gap: 0.35rem; color: var(--slate-400);">
+            <span>Back to top</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/scripts.js"></script>
 </body>
+</html>
