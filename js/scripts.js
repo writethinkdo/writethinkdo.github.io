@@ -59,38 +59,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 3. Interactive Mandate Diagnostic Tracks
+  // 3. Challenge & Practice Area Details
   const diagnosticData = {
     negotiations: {
-      title: 'Commercial & Supplier Negotiations Track',
-      text: 'Engineered for organizations facing high-stakes vendor contract renewals, complex enterprise pricing asymmetry, partner disputes, or high-value procurement negotiations.',
+      title: 'Commercial & Supplier Negotiations',
+      text: 'For organizations preparing for high-stakes vendor renewals, unbalanced supplier pricing, partner disputes, or major enterprise contracts.',
       checklist: [
-        'Harvard Program on Negotiation (PON) methodology & BATNA modeling',
-        'Direct table negotiation or strategic behind-the-scenes scenario modeling',
-        'Term sheet redlining & risk-limiting contract governance',
-        'Targeted 15%–35% commercial value optimization'
+        'Harvard Program on Negotiation (PON) methodology & walk-away option analysis',
+        'Direct table negotiations or strategic behind-the-scenes scenario modeling',
+        'Clear term sheet redlining & contract risk protection',
+        'Targeted 15%–35% direct cost reduction and commercial value gains'
       ],
       selectValue: 'negotiations'
     },
     facilitation: {
-      title: 'Executive & Board Facilitation Track',
-      text: 'Designed for senior executive teams, multi-stakeholder working groups, and boards confronting strategic deadlock, conflicting departmental mandates, or complex policy challenges.',
+      title: 'Executive & Board Facilitation',
+      text: 'For executive leadership teams, cross-functional groups, and boards navigating tough strategic choices, competing priorities, or complex policy decisions.',
       checklist: [
-        'Neutral, third-party objective facilitation & alignment architecture',
-        'Consensus-building frameworks for contentious decisions',
-        'Boardroom alignment & executive decision sessions',
-        'Compression of months of circular debate into decisive, unified action'
+        'Independent, objective facilitation to align competing viewpoints',
+        'Proven consensus-building frameworks for contentious decisions',
+        'Focused boardroom alignment and executive decision sessions',
+        'Replacing months of circular debate with clear, decisive action'
       ],
       selectValue: 'facilitation'
     },
     procurement: {
-      title: 'Strategic Procurement & Sourcing Track',
-      text: 'Tailored for public sector authorities and corporate enterprises overhauling major RFP/RFx processes, mitigating bid-protest risks, or modernizing vendor ecosystems.',
+      title: 'Strategic Procurement & Sourcing',
+      text: 'For public agencies and enterprise organizations running major competitive bids, seeking to prevent vendor lock-in, and ensuring compliance.',
       checklist: [
-        'Public sector procurement regulations & audit-proof governance',
-        'End-to-end defensible RFx design, evaluation matrices & vendor scoring',
-        'Total Cost of Ownership (TCO) & should-cost modeling',
-        'Post-award vendor governance & performance management architecture'
+        'Transparent public sector procurement and audit-ready governance',
+        'Clear, defensible competitive bidding (RFP, RFQ, RFI, and Negotiated RFP)',
+        'Total Cost of Ownership (TCO) and should-cost pricing models',
+        'Post-award vendor oversight and clear performance agreements'
       ],
       selectValue: 'procurement'
     }
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
         .map(function (item) {
           return `<li>
             <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 011.414 0l8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
             </svg>
             <span>${item}</span>
           </li>`;
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (diagCtaBtn) {
       diagCtaBtn.setAttribute('data-target-area', data.selectValue);
-      diagCtaBtn.textContent = `Inquire About ${data.title.split(' ')[0]} Advisory`;
+      diagCtaBtn.textContent = 'Discuss This Mandate';
     }
   }
 
